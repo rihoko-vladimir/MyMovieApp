@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/movies_list_fragment"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="Movies"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/movie_search_fragment"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/account_fragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Account"
+        tools:ignore="HardcodedText" />
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_navigation"
+    app:startDestination="@id/movies_list_fragment">
+    <fragment
+        android:id="@+id/movies_list_fragment"
+        android:name="com.rihoko.movieapp.view.MovieListFragment"
+        android:label="MovieListFragment"
+        tools:layout="@layout/movies_list_fragment">
+        <action
+            android:id="@+id/action_go_to_movie_selected_Fragment"
+            app:destination="@id/movie_description_fragemnt"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" >
+            <argument
+                android:name="selected"
+                app:argType="com.rihoko.movieapp.model.movie_response.Movie"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/movie_search_fragment"
+        android:name="com.rihoko.movieapp.view.MovieSearchFragment"
+        tools:layout="@layout/movie_search_fragment" />
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.rihoko.movieapp.view.AccountFragment" />
+    <fragment
+        android:id="@+id/movie_description_fragemnt"
+        android:name="com.rihoko.movieapp.view.MovieFragment"
+        tools:layout="@layout/movie_fragment" />
+</navigation>
